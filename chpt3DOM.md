@@ -1,1 +1,0 @@
-<img src="img/chpt3.png"/>
