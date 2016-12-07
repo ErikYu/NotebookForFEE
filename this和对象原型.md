@@ -32,11 +32,10 @@ this和对象原型
 	  
 	}
 	foo();//foo的调用位置
-	
 	</code></pre>
 2. 几个绑定规则
-- 默认绑定：独立函数调用。this指向全局对象
-- 隐式绑定：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的this绑定到这个上下文对象
+  1. 默认绑定：独立函数调用。this指向全局对象
+  2. 隐式绑定：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的this绑定到这个上下文对象
 
 	<pre><code>function foo(){
 	  console.log(this.a);
@@ -48,7 +47,7 @@ this和对象原型
 	var a="hey gus";
 	obj.foo();//2
 	</code></pre>
-隐式丢失问题：被隐式绑定的函数会丢失绑定对象，此时会应用默认绑定。
+  隐式丢失问题：被隐式绑定的函数会丢失绑定对象，此时会应用默认绑定。
 
 	<pre><code>function foo(){
 	  console.log(this.a);
@@ -61,7 +60,7 @@ this和对象原型
 	var bar=obj.foo;
 	bar();//"hey gus"
 	</code></pre>
-传入回调函数时，参数传递也是一种隐式赋值。
+  传入回调函数时，参数传递也是一种隐式赋值。
 
 	<pre><code>function foo(){
 	  console.log(this.a);
@@ -77,7 +76,7 @@ this和对象原型
 	doFoo(obj.foo);//"hey gus"
 	</code></pre>
 
-- 显式绑定：使用call()和apply()方法。foo.call(obj)，调用foo时强制把它的this绑定到obj上。从this绑定的角度上说，call()和apply()是一样的。
+  3. 显式绑定：使用call()和apply()方法。foo.call(obj)，调用foo时强制把它的this绑定到obj上。从this绑定的角度上说，call()和apply()是一样的。
 
 	<pre><code>function foo(){
 	  console.log(this.a);
@@ -120,7 +119,7 @@ ES5提供内置方法function.prototype.bind(),bind()会返回一个硬编码的
 	</code></pre>
 API调用的上下文
 
-- new绑定：在JavaScript中，构造函数只是一些用new操作符时被调用的函数。
+  4. new绑定：在JavaScript中，构造函数只是一些用new操作符时被调用的函数。
 使用new来调用foo()时，会构造一个新对象并把它绑定到foo()调用中的this上。
 
 	<pre><code>function foo(a){
