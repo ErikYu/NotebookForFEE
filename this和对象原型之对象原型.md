@@ -25,7 +25,7 @@ this和对象原型2#
      - 则不能修改属性描述符，但是可以将writable由true改为false，反之不行；不管是否处于严格模式，试图修改一个不可配置的属性描述符都会抛出TypeError错误
      - 禁止删除这个属性；删除后静默失败；
    - enumerable：设置为false后，这个属性就不会出现在枚举中。for...in...
-5. getter和setter：当一个属性定义setter、getter或者两者都有时，这个属性会被定义为“访问描述符”，与数据描述符相对；
+5. getter和setter：当一个属性定义setter、getter或者两者都有时，这个属性会被定义为“访问描述符”，与数据描述符相对；对于访问描述符，JS会忽略它的value和writable，取而代之关心它的set和get(还有configurable, enumerable)；
 6. 下例中，不管是对象文字语法中get a(){}的，还是defineProperty()中的显示定义，两者都会在对象中创建一个没有值的属性，对此属性的访问会自动调用隐藏函数，它的返回值会被当作属性访问的返回值；
 ```javascript
 var myObject={
@@ -54,3 +54,6 @@ var myObject={
 myObject.a=7;
 console.log(myObject.a);
 ```
+8. 属性的存在性判断：
+   - "a" in myObject; //true || false，会检查对象和原型链
+   - myObject.hasOwnProperty("a"); //true || false，只检查对象
