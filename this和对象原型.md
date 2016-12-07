@@ -12,27 +12,28 @@ this和对象原型
 
 ---
 1. 调用位置：分析调用栈（就是为了达到当前执行位置所调用的所有函数），**调用位置就在当前正在执行的函数的前一个调用中**；
-```javascript
-function foo(){
-  //当前调用栈是：foo
-  //因此，当前调用位置是全局作用域
-  console.log("foo");
-  bar();
-}
-function bar(){
-  //当前调用栈是：foo -> bar
-  //因此，当前调用位置是foo中
-  console.log("bar");
-  baz();
-}
-function baz(){
-  //当前调用栈是：foo -> bar -> baz
-  //因此，当前调用位置是bar中
-  comsole.log("baz");
-  
-}
-foo();//foo的调用位置
-```
+	```javascript
+	function foo(){
+	  //当前调用栈是：foo
+	  //因此，当前调用位置是全局作用域
+	  console.log("foo");
+	  bar();
+	}
+	function bar(){
+	  //当前调用栈是：foo -> bar
+	  //因此，当前调用位置是foo中
+	  console.log("bar");
+	  baz();
+	}
+	function baz(){
+	  //当前调用栈是：foo -> bar -> baz
+	  //因此，当前调用位置是bar中
+	  comsole.log("baz");
+
+	}
+	foo();//foo的调用位置
+	```
+
 2. 几个绑定规则
    1. **默认绑定**：独立函数调用。this指向全局对象
    2. **隐式绑定**：当函数引用有上下文对象时，隐式绑定规则会把函数调用中的this绑定到这个上下文对象。
