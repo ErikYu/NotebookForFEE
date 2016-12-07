@@ -122,13 +122,13 @@ this和对象原型
 		```
 		3.2 API调用的上下文
    4. **new绑定**：在JavaScript中，构造函数只是一些用new操作符时被调用的函数。使用new来调用foo()时，会构造一个新对象并把它绑定到foo()调用中的this上。
-		```javascript
-		function foo(a){
-		  this.a=a;
-		}
-		var bar=new foo(2);
-		console.log(bar.a);//2	
-		```
+	```javascript
+	function foo(a){
+	  this.a=a;
+	}
+	var bar=new foo(2);
+	console.log(bar.a);//2	
+	```
 
 3. 优先级顺序：
 	1. 由new调用？绑定到新创建的对象；
