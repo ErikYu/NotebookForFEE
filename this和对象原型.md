@@ -88,7 +88,7 @@ this和对象原型
 		  foo: foo
 		}
 		var a="hey gus";
-		foo.call(obj);//"hey gus"
+		foo.call(obj);//"2"
 		```
 		以上的显式绑定仍无法解决丢失绑定问题
 		3.1 硬绑定的典型就是创建一个包裹函数，传入所有的参数并返回所有接收到的值；
