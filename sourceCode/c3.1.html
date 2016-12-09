@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.another{
+				color: red;
+				font-style: italic;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	</head>
+	<body>
+		<input type="button" value="追加属性"/>
+		<input type="button" value="切换样式"/>
+		<input type="button" value="dsa"/>
+		<br />
+		<p>你好</p>
+		<p1>thi is a par</p1>
+		<script>
+$(function(){
+	//插入节点
+	$("p").prepend("<b>world, </b>");
+	$("p").after("<b>, 233</b>")
+	//移动节点
+	var li_1=$("<li title='banana'>Banana</li>");
+	var li_2=$("<li title='pear'>Pear</li>");
+	var li_3=$("<li title='other'>Other</li>");
+	var $parent=$("<ul></ul>");
+	$parent.append(li_1);
+	$parent.append(li_2);
+	$parent.append(li_3);
+	$("body").append($parent);
+	var sec=$("ul li:eq(1)");
+	var tid=$("ul li:eq(2)");
+	tid.insertBefore(sec);
+	//复制节点
+	$("ul li").click(function(){
+		$(this).clone(true).appendTo("ul");
+	});
+	//替换节点
+	$("p").replaceWith("<i>斜体的你好</i>")
+	//追加样式
+	var btn1=$("input[value=追加属性]:eq(0)");
+	btn1.click(function(){
+		$("li").addClass("another");
+	})
+	//切换样式
+	var btn2=$("input[value=切换样式]:eq(0)");
+	btn2.click(function(){
+		$("li").toggleClass("another");
+	})
+	//
+})
+
+		</script>
+	</body>
+</html>
