@@ -3,6 +3,7 @@
 ###主要包括
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/DOMScripting">JSDOM编程艺术</a>
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/sharpjQuery">锋利的jQuery</a>
+  - <a href="https://github.com/ErikYu/NotebookForFEE/blob/sharpjQuery/chpt4.1jQuery%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6.md">4.1 jQuery中的事件</a>
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/CSS">CSS权威指南</a>
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/JSYouDontKno">你不知道的JS</a>
 - AngularJS权威教程
