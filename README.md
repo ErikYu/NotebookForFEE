@@ -11,6 +11,7 @@
   - <a href="https://github.com/ErikYu/NotebookForFEE/blob/sharpjQuery/CHPT6.6%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%83%E7%B4%A0.md">CHPT6.6 序列化元素</a>
   - <a href="https://github.com/ErikYu/NotebookForFEE/blob/sharpjQuery/CHPT7.1%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81validation.md">CHPT7.1 表单验证validation</a>
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/CSS">CSS权威指南</a>
+- <a href="https://github.com/ErikYu/NotebookForFEE/tree/CSSPro">CSS高效开发实战</a>
 - <a href="https://github.com/ErikYu/NotebookForFEE/tree/JSYouDontKno">你不知道的JS</a>
 - AngularJS权威教程
 - JS高级程序设计
